@@ -18,38 +18,38 @@
             void CrocodileGame()
             {
                 while(gameOn){
-                int num1 = r.Next(1,11);
-                int num2 = r.Next(1,11);
-                
-                Console.WriteLine($"points: {points}");
-                Console.WriteLine($"{num1} _ {num2}");
+                    int num1 = r.Next(1,11);
+                    int num2 = r.Next(1,11);
+                    
+                    Console.WriteLine($"points: {points}");
+                    Console.WriteLine($"{num1} _ {num2}");
 
-                string userInput = Console.ReadLine();
+                    string userInput = Console.ReadLine();
 
-                if (userInput == "=")
-                {
-                    if (num1 == num2) points++;
-                    else points--;
-                } 
-                else if (userInput == "<")
-                {
-                    if (num1 < num2) points++;
-                    else points--;
-                }
-                else if (userInput == ">")
-                {
-                    if (num1 > num2) points++;
-                    else points--;
-                }
-                else
-                {
-                    gameOn = false;
-                    Console.WriteLine($"Your final score was {points}!");
-                }
-                
+                    if (userInput == "=")
+                    {
+                        if (num1 == num2) points++;
+                        else points--;
+                    } 
+                    else if (userInput == "<")
+                    {
+                        if (num1 < num2) points++;
+                        else points--;
+                    }
+                    else if (userInput == ">")
+                    {
+                        if (num1 > num2) points++;
+                        else points--;
+                    }
+                    else
+                    {
+                        gameOn = false;
+                        Console.WriteLine($"Your final score was {points}!");
+                    }
+                    
 
-                Console.WriteLine();
-                CrocodileGame();
+                    Console.WriteLine();
+                    CrocodileGame();
                 }
             }
 
